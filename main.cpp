@@ -14,15 +14,18 @@ void time()
     {
         s = s * 1000;
     }
-    cout << "The result is t= " << s / v << endl;
+    cout << "\n";
+
+    cout << "  The result is t= " << s / v << endl;
 }
 void distance()
 {
     int t, v;
     cout << "What is V and t ?" << endl;
     cin >> v >> t;
+    cout << "\n";
 
-    cout << "The answer is S= " << t * v << endl;
+    cout << "  The answer is S= " << t * v << endl;
 }
 void velocity()
 {
@@ -37,7 +40,8 @@ void velocity()
     {
         s = s * 1000;
     }
-    cout << "The answer is v= " << s / t << endl;
+    cout << "\n";
+    cout << "  The answer is v= " << s / t << endl;
 }
 void browser()
 {
@@ -85,15 +89,15 @@ again:
     {
     case 1:
         distance();
-        cln(test_case);
+
         break;
     case 2:
         velocity();
-        cln(test_case);
+
         break;
     case 3:
         time();
-        cln(test_case);
+
         break;
     case 1204:
         browser();
@@ -105,7 +109,10 @@ again:
     }
     // last wish
 agreement:
+
+    cout << "\n";
     cout << "Do again run this program?\n";
+    cout << " y for Yes\n n for No";
     cout << "What is choich:" << endl;
     cin >> agree;
     //  agreement
