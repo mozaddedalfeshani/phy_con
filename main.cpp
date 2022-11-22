@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int test_case;
+
 void time()
 {
     int s, v, s_type;
@@ -31,41 +33,73 @@ void velocity()
     cin >> t >> s;
     cout << "Is S is Km type? y/n" << endl;
     cin >> s_type;
-    if (s_type == ('y' | 'Y'))
+    if (s_type == ('y') || ('Y'))
     {
         s = s * 1000;
     }
     cout << "The answer is v= " << s / t << endl;
+}
+void browser()
+{
+
+    if (test_case == 2)
+    {
+        system("open https://github.com/mozaddedalfeshani/phy_con");
+    }
+    else if (test_case == 1)
+    {
+        system("start https://github.com/mozaddedalfeshani/phy_con");
+    }
+}
+void cln(int test)
+{
+    if (test == 2)
+    {
+        system("clear");
+    }
+    else if (test == 1)
+    {
+        system("clean");
+    }
 }
 
 int main()
 {
     // variable declaration
     char agree;
-    int test_case;
+    cout << "1: Windows ?\n 2: Mac \n ";
     cin >> test_case;
+    cln(test_case);
+
     short int choich = 0;
 again:
 
     //  what you want
     // list
     cout << "Hey ! What you want enter selection By input number:: \n ";
-    cout << "1 for Determine S \n 2 for Determine V \n 3 for Determine T \n 1204 ==> Source code \n";
+    cout << "1 for Determine Distance(S) \n 2 for Determine Velocity(V) \n 3 for Determine Time(t) \n 1204 ==>Github Source code \n";
     // switch
     cin >> choich;
+    cln(test_case);
     switch (choich)
     {
     case 1:
         distance();
+        cln(test_case);
         break;
     case 2:
         velocity();
+        cln(test_case);
         break;
     case 3:
         time();
+        cln(test_case);
         break;
     case 1204:
-        system("open https://github.com/mozaddedalfeshani/phy_con");
+        browser();
+        cln(test_case);
+        break;
+
     default:
         break;
     }
@@ -77,12 +111,13 @@ agreement:
     //  agreement
     if (agree == ('y' | 'Y'))
     {
-        system("clear");
+        cln(test_case);
+
         int count;
         cout << "Your favorite programe again start : " << count << endl;
         goto again;
     }
-    else if (agree == ('n' | 'N'))
+    else if (agree == ('n') || ('N'))
     {
         return 0;
     }
