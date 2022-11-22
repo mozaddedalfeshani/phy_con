@@ -14,7 +14,7 @@ void time()
 void distance()
 {
     int t, v;
-    cout << "What is V and t ?" << endl;
+    cout << "What is V(ms) and t(sec) ?" << endl;
     cin >> v >> t;
     int ans = v * t;
     cout << "Anser: " << ans << endl;
