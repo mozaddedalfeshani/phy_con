@@ -5,43 +5,30 @@ int test_case;
 
 void time()
 {
-    int s, v, s_type;
-    cout << "Enter the S and V" << endl;
+    int s, v;
+    cout << "Enter S(m) and v(ms)" << endl;
     cin >> s >> v;
-    cout << "Is S is Km type? y/n" << endl;
-    cin >> s_type;
-    if (s_type == ('y' | 'Y'))
-    {
-        s = s * 1000;
-    }
-    cout << "\n";
-
-    cout << "  The result is t= " << s / v << endl;
+    int ans = s / v;
+    cout << "Anser: " << ans << endl;
 }
 void distance()
 {
     int t, v;
     cout << "What is V and t ?" << endl;
     cin >> v >> t;
-    cout << "\n";
-
-    cout << "  The answer is S= " << t * v << endl;
+    int ans = v * t;
+    cout << "Anser: " << ans << endl;
 }
 void velocity()
 {
     char s_type;
 
     int s, t;
-    cout << "What is t and s ?" << endl;
+    cout << "What is T (sec) and S (m) ?" << endl;
     cin >> t >> s;
-    cout << "Is S is Km type? y/n" << endl;
-    cin >> s_type;
-    if (s_type == ('y') || ('Y'))
-    {
-        s = s * 1000;
-    }
-    cout << "\n";
-    cout << "  The answer is v= " << s / t << endl;
+
+    int ans = s / t;
+    cout << "Anser: " << ans << endl;
 }
 void browser()
 {
@@ -97,7 +84,6 @@ again:
         break;
     case 3:
         time();
-
         break;
     case 1204:
         browser();
@@ -112,7 +98,7 @@ agreement:
 
     cout << "\n";
     cout << "Do again run this program?\n";
-    cout << " y for Yes\n n for No";
+    cout << " y for Yes\n n for No\n";
     cout << "What is choich:" << endl;
     cin >> agree;
     //  agreement
