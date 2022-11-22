@@ -59,7 +59,7 @@ void cln(int test)
     }
     else if (test == 1)
     {
-        system("clean");
+        system("cls");
     }
 }
 
