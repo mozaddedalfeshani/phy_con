@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// global variable
+
 int test_case;
 
 void time()
@@ -120,3 +122,5 @@ agreement:
         goto agreement;
     }
 }
+// it's all compleate 
+
